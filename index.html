@@ -1,1 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For You ❤️</title>
+<style>
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: #fff0f5;
+    text-align: center;
+  }
+
+  .card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    width: 320px;
+  }
+
+  h2 {
+    margin-bottom: 30px;
+  }
+
+  button {
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+  }
+
+  #yes {
+    background: #ff4d6d;
+    color: white;
+  }
+
+  #no {
+    background: #adb5bd;
+    color: white;
+    position: relative;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <h2 id="question">
+    Will you be my Valentine, <br><b>Vidya</b>? 💘
+  </h2>
+
+  <button id="yes" onclick="yesClick()">Yes 💕</button>
+  <button id="no" onclick="noClick()">No 🙈</button>
+</div>
+
+<script>
+let step = 0;
+
+function noClick() {
+  const question = document.getElementById("question");
+  const noBtn = document.getElementById("no");
+
+  const messages = [
+    "Are you sure? 🥺",
+    "Not even a little? 😢",
+    "Try again 😏",
+    "Think once more 💭"
+  ];
+
+  question.innerHTML = messages[step % messages.length];
+  step++;
+
+  noBtn.style.transform =
+    `translate(${Math.random()*80 - 40}px, ${Math.random()*60 - 30}px)`;
+}
+
+function yesClick() {
+  document.body.innerHTML = `
+    <div class="card">
+      <h2>YAYYYY 💖🥰</h2>
+      <p>You just made me the happiest ❤️</p>
+      <p>Happy Valentine’s Day 🌹</p>
+    </div>
+  `;
+}
+</script>
+
+</body>
+</html>
 
