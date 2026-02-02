@@ -1,95 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>For You ❤️</title>
+<meta charset="UTF-8">
+<title>For You 💖</title>
 
-  <style>
-    body {
-      height: 100vh;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #fff0f5;
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
+<style>
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff0f5;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
 
-    .card {
-      background: white;
-      padding: 40px;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-      width: 320px;
-    }
+  .card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    width: 320px;
+  }
 
-    #loveImg {
-      display: none;   /* 🔴 important */
-      width: 260px;
-      margin: 20px auto;
-      border-radius: 15px;
-    }
+  button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
 
-    button {
-      padding: 10px 20px;
-      margin: 10px;
-      border: none;
-      border-radius: 20px;
-      font-size: 16px;
-      cursor: pointer;
-    }
+  #yes {
+    background: #ff4d6d;
+    color: white;
+  }
 
-    #yes {
-      background: #ff4d6d;
-      color: white;
-    }
+  #no {
+    background: #ddd;
+  }
 
-    #no {
-      background: #ccc;
-    }
-  </style>
+  #loveImg {
+    display: none;      /* 👈 pehle hidden */
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 15px;
+  }
+</style>
 </head>
 
 <body>
 
-  <div class="card">
-    <h2 id="text">
-      Will you be my Valentine,<br>
-      <b>Vidya</b> 💖
-    </h2>
+<div class="card">
+  <h2 id="text">
+    Will you be my Valentine,<br>
+    <b>Vidya</b> 💖
+  </h2>
 
-    <!-- IMAGE -->
-    <img id="loveImg" src="love.jpg" alt="love">
+  <!-- IMAGE -->
+  <img id="loveImg" src="love.jpg" alt="love">
 
-    <!-- BUTTONS -->
-    <button id="yes" onclick="yes()">Yes 💕</button>
-    <button id="no" onclick="no()">No 🙈</button>
-  </div>
+  <!-- BUTTONS -->
+  <button id="yes" onclick="yes()">Yes 💕</button>
+  <button id="no" onclick="no()">No 🙈</button>
+</div>
 
-  <script>
-    let i = 0;
+<script>
+let i = 0;
 
-    function no() {
-      const msgs = [
-        "Are you sure? 🥺",
-        "Think again 😳",
-        "Not allowed 😈",
-        "Try Yes 💖"
-      ];
-      document.getElementById("text").innerHTML = msgs[i % msgs.length];
-      i++;
-    }
+function no() {
+  const msgs = [
+    "Are you sure? 🥺",
+    "Think again 😢",
+    "Not allowed 😈",
+    "Try Yes 💖"
+  ];
+  document.getElementById("text").innerHTML = msgs[i % msgs.length];
+  i++;
+}
 
-    function yes() {
-      document.getElementById("text").innerHTML =
-        "YAYYYY 💖🥰<br>You just made me the happiest 💕<br>Happy Valentine’s Day 🌹";
+function yes() {
+  document.getElementById("text").innerHTML =
+    "YAYYYY 💖🥰<br>You just made me the happiest babe 💘<br>Love you 🌹";
 
-      document.getElementById("loveImg").style.display = "block";
-      document.getElementById("yes").style.display = "none";
-      document.getElementById("no").style.display = "none";
-    }
-  </script>
+  document.getElementById("loveImg").style.display = "block";
+  document.getElementById("yes").style.display = "none";
+  document.getElementById("no").style.display = "none";
+}
+</script>
 
 </body>
 </html>
